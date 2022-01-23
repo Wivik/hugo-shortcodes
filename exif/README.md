@@ -31,5 +31,5 @@ Will render :
 
 - [Visite d'une case de Champagne](https://blog.zedas.fr/posts/visite-cave-champagne/) : The Blog article that made me writing this shortcode
 
-If you want to display your shortcode usage in this showcase, feel free to open au Pull Request on this file or [contact me](https://blog.zedas.fr/contact/)
+If you want to display your shortcode usage in this showcase, feel free to open a Pull Request on this file or [contact me](https://blog.zedas.fr/contact/).
 
