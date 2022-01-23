@@ -1,6 +1,6 @@
 # Mastodon Toot integration
 
-## Purpose
+## Usage
 
 This shortcode will convert `{{<toot link="https://mastodon.instance/thetoot">}}` into this :
 
@@ -19,4 +19,11 @@ Example :
 Will render :
 
 ![toot](toot.png)
+
+## Install
+
+Copy the content of the `shortcodes/` folder into on of these folders (order by Hugo's precedence):
+
+1. `/layouts/shortcodes/toot.html`
+2. `/themes/YOURTHEME/layouts/shortcodes/toot.html`
 

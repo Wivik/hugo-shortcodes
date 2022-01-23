@@ -1,6 +1,6 @@
 # Display pictures with EXIF Metadata
 
-## Purpose
+## Usage
 
 This shortcode will convert `{{<exif src="path/to/picture.jpg" alt="My Picture">}}` into this :
 
@@ -25,7 +25,29 @@ Will render :
 
 ![exif](exif.png)
 
+A second shortcode is also available for debugging purpose and will render all available tags into a list.
 
+`{{<exif-full src="path/to/picture.jpg" alt="My Picture">}}`
+
+Will render :
+
+![exif-full](exif-full.png)
+
+## Install
+
+### Shortcode
+
+Copy the content of the `shortcodes/` folder into on of these folders (order by Hugo's precedence):
+
+1. `/layouts/shortcodes/exif.html`
+2. `/themes/YOURTHEME/layouts/shortcodes/exif.html`
+
+### Partials
+
+Copy the content of the `partials/` folder into on of these folders (order by Hugo's precedence):
+
+1. `/layouts/partials/format-exposure-time.html`
+2. `/themes/YOURTHEME/layouts/partials/format-exposure-time.html`
 
 ## Showcase
 
