@@ -6,7 +6,7 @@ This shortcode will convert `{{<exif src="path/to/picture.jpg" alt="My Picture">
 
 ```html
 <figure>
-<img src="<image permalink>" alt="My Picture">
+<a href="image.permalink"><img src="image.thumbnail" alt="My Picture"></a>
     <figcaption class="exif"> My Picture
         <br />CameraModel LensModel ApertureValue FocalLength ExposureTime ISOValue
         <br />ArtistName - PictureDateTime - CopyrightLicense
@@ -15,10 +15,15 @@ This shortcode will convert `{{<exif src="path/to/picture.jpg" alt="My Picture">
 </figure>
 ```
 
+Options :
+
+- `alt` : display the alternative text and caption
+- `resize` : give the resize value for the thumbnail, as `<int>x`. Ex : `480x`. Default is `720x`.
+
 Example :
 
 ```golang
-{{< exif src="photos/visite-cave-champagne/DSC_0023.jpg" alt="Voûtes taillées dans la craie" >}}
+{{< exif src="photos/visite-cave-champagne/DSC_0023.jpg" alt="Voûtes taillées dans la craie" resize="720x" >}}
 ```
 
 Will render :
