@@ -1,0 +1,21 @@
+{{ $content := . }}
+
+{{- /* get icons permalink */ -}}
+{{- $ccIcon := resources.Get "icons/creative-commons-fill.png" -}}
+{{- $byIcon := resources.Get "icons/creative-commons-by-fill.png" -}}
+{{- $saIcon := resources.Get "icons/creative-commons-sa-fill.png" -}}
+{{- $ncIcon := resources.Get "icons/creative-commons-nc-fill.png" -}}
+{{- $ndIcon := resources.Get "icons/creative-commons-nd-fill.png" -}}
+
+{{ $cc := findRE "Creative Commons" $content }}
+{{ $by := findRE "Attribution" $content }}
+{{ $sa := findRE "ShareAlike" $content }}
+{{ $nc := findRE "NonCommercial" $content }}
+{{ $nd := findRE "NoDerivatives" $content }}
+
+
+{{if $cc }}<span class="icon" style="background-image: url('{{ $ccIcon.Permalink }}')" title="Creative Commons">&nbsp;</span>{{ end }}
+{{if $by }}<span class="icon" style="background-image: url('{{ $byIcon.Permalink }}')" title="Attribution">&nbsp;</span>{{ end }}
+{{if $sa }}<span class="icon" style="background-image: url('{{ $saIcon.Permalink }}')" title="ShareAlike">&nbsp;</span>{{ end }}
+{{if $nc }}<span class="icon" style="background-image: url('{{ $ncIcon.Permalink }}')" title="NonCommercial">&nbsp;</span>{{ end }}
+{{if $nd }}<span class="icon" style="background-image: url('{{ $ndIcon.Permalink }}')" title="NoDerivates">&nbsp;</span>{{ end }}
